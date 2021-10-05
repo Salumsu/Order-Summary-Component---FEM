@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+body {
+  background-color: #e2e8ff;
+}
+
+.App .curved-background {
+  background-image: url(images/pattern-background-desktop.svg);
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background-repeat: no-repeat;
+  background-size: 120%;
+  z-index: -1;
+}
+
+.card {
+  text-align: center;
+  display: grid;
+  grid-template-rows: 30% 70%;
+  border-radius: 15px;
+  overflow: hidden;
+  margin-bottom: 50px;
+  width: 350px;
+  margin: 100px auto;
+  height: 700px;
+  transform: translateY(100px);
+}
+
+.card .background {
+  background: url(images/illustration-hero.svg) center;
+  background-size: 150%;
+}
+
+.summary {
+  color: hsl(224, 23%, 55%);
+  background: white;
+  padding: 20px;
+}
+
+.summary h1 {
+  color: hsl(223, 47%, 23%);
+  padding: 20px;
+  font-size: 25px;
+}
+
+.summary .description {
+  padding: 10px 20px 20px 20px;
+  font-size: 14px;
+  line-height: 30px;
+  margin-bottom: 20px;
+}
+
+.order {
+  width: 100%;
+  height: 70px;
+  display: grid;
+  grid-template-columns: 20% 50% 30%;
+  padding: 10px;
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.order span {
+  margin-left: 20px;
+}
+
+.order h4 {
+  color: hsl(223, 47%, 23%);
+}
+
+.order img {
+  position: relative;
+  top: -9px;
+  left: 10 px;
+  height: 60px;
+}
+
+.order .order-change {
+  margin: 10px auto;
+  font-weight: 700;
+}
+
+.order .order-change:hover {
+  text-decoration: none;
+  color: hsl(224, 23%, 55%);
+}
+
+.summary button {
+  width: 100%;
+  height: 60px;
+  border-radius: 10px;
+  border: none;
+  background: hsl(245, 75%, 52%);
+  color: white;
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.summary button:hover {
+  background: #776df2;
+}
+
+.summary .cancel-order {
+  text-decoration: none;
+  font-weight: 900;
+  color: hsl(224, 23%, 55%);
+}
+
+.summary a:hover {
+  color: hsl(245, 75%, 52%);
+}
+
+button:hover,
+a:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 376px) {
+  .card {
+    width: 90%;
+    margin: 20px auto 50px;
+    height: 110vh;
+  }
+
+  .App {
+    height: 900px;
+  }
+
+  .card .background {
+    background-size: 130%;
+  }
+
+  .App .curved-background {
+    background: url(images/pattern-background-mobile.svg);
+    background-size: 120%;
+    background-repeat: no-repeat;
+  }
+}
